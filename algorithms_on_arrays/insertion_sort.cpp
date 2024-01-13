@@ -1,3 +1,11 @@
+#include <iostream>
+
+void print_array(int* arr, int size)
+{
+	for (int i = 0; i < size; ++i)
+		std::cout << arr[i] << ' ';
+}
+
 void insertion_sort(int* arr, int size)
 {
 	for (int i = 0; i < size - 1; ++i)
@@ -21,4 +29,17 @@ void insertion_sort(int* arr, int size)
 			}
 		}
 	}
+}
+
+int main()
+{
+	constexpr int ARRAY_SIZE = 8;
+	int arr[ARRAY_SIZE] = { 6, 5, 3, 1, 8, 7, 2, 4 };
+	print_array(arr, ARRAY_SIZE);
+	std::cout << std::endl;
+	insertion_sort(arr, ARRAY_SIZE);
+	print_array(arr, ARRAY_SIZE);
+	std::cout << std::endl;
+
+	return 0;
 }
