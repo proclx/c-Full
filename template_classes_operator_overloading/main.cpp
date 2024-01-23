@@ -67,3 +67,26 @@ std::ostream& operator<<(std::ostream& out, const SmartArray<T1>& other)
 	out << '\n';
 	return out;
 }
+
+int main()
+{
+	int arr_i[]{ 1, 2, 3 };
+	int arr_i_2[]{ 4, 5, 6 };
+
+	SmartArray sa_arr_i{ arr_i, 3 };
+	SmartArray sa_arr_i_2{ arr_i_2, 3 };
+
+	std::cout << sa_arr_i;
+	std::cout << sa_arr_i_2;
+
+	SmartArray sa_arr_i_copy{ sa_arr_i };
+
+	std::cout << sa_arr_i_copy;
+
+	sa_arr_i = sa_arr_i_2;
+
+	std::cout << sa_arr_i;
+	std::cout << sa_arr_i_2;
+
+	return 0;
+}
