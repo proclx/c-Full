@@ -1,5 +1,4 @@
 #include <iostream>
-
 template <typename T>
 class SmartArray
 {
@@ -58,7 +57,6 @@ public:
 	const T* getArr() const { return sa_arr; }
 	int getSize() const { return sa_size; }
 };
-
 template <typename T1>
 std::ostream& operator<<(std::ostream& out, const SmartArray<T1>& other)
 {
@@ -67,7 +65,6 @@ std::ostream& operator<<(std::ostream& out, const SmartArray<T1>& other)
 	out << '\n';
 	return out;
 }
-
 int main()
 {
 	int arr_i[]{ 1, 2, 3 };
